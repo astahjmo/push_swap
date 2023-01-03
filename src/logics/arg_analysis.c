@@ -6,11 +6,10 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2022/12/26 14:42:19 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/03 14:54:11 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "errors.h"
 #include "push_swap.h"
 
 static int check_overflow(char *argv)

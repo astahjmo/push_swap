@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/03 11:59:01 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/03 15:45:13 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ typedef struct s_stack{
 	uint64_t	size;
 	t_node		*head;
 	void		(*push)(t_stack *stack, int value);
-	void		(*pop)(t_stack *stack, int index);
-	t_node		(*top)(t_stack *stack);
+	void		(*pop)(t_stack *stack);
+	t_node		*top;
 	int			(*isEmpty)(t_stack *stack);
 }				t_stack;
 
 int		check_arguments(int argc, char *argv[]);
 int		isEmpty(t_stack *stack);
 void	push(t_stack *stack, int value);
-void	pop(t_stack *stack, int value);
+void	pop(t_stack *stack);
 void	top(t_stack *stack);
 int	init_stack(int argc, char *argv[]);
-void	ft_add_back(t_node **lst, t_node *new);
+t_node	*ft_add_back(t_node **node, t_node *new);
 void	ft_add_front(t_node **lst, t_node *new);
 void	*ft_nodenew(int content);
 t_node *ft_lastnode(t_node *node);
