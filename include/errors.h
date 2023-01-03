@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   errors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 12:03:50 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/03 11:16:12 by johmatos         ###   ########.fr       */
+/*   Created: 2022/12/15 17:25:51 by johmatos          #+#    #+#             */
+/*   Updated: 2022/12/15 22:26:33 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int main(int argc, char *argv[])
-{
-	if (argc < 3)
-		return (printf(NO_ARGS));
-	if(!check_arguments(argc, argv))
-		ft_printf(ARGS_ERROR);
-	if (!init_stack(argc, argv))
-		ft_printf("error stack");
-}
+#ifndef ERRORS_H
+#define ERRORS_H
+# define ARGS_ERROR "[ERROR]: Arguments must be passed as valid integer!\n"
+# define NO_ARGS "[ERROR]: You must pass at least 2 integers to sort!\n"
+#endif // ! 
