@@ -6,24 +6,31 @@
 #    By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2022/12/13 23:23:37 by johmatos         ###   ########.fr        #
+#    Updated: 2023/01/03 12:00:48 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 TARGET = push_swap
-INCLUDE = ./include
+INCLUDE = ./include/
 LIB = libft.a
-VPATH = ./src ./src/analysis
-SOURCE = main.c
+VPATH = ./src ./src/logics ./src/algorithms ./src/instructions ./src/utils
+SOURCES = arg_analysis.c list_initialize.c utils.c main.c ft_addback.c\
+		  ft_addfront.c ft_nodenew.c ft_lastnode.c
+BUILDDIR = ./objs/
+OBJS = $(addprefix $(BUILDDIR), $(SOURCES:.c=.o))
+CC = gcc 
+CFLAGS = -g
 
-all: TARGET
+all: $(TARGET)
 
-TARGET: $(LIB)
-	gcc -g3 -I./include -I./lib/include/ -o $(TARGET) ./src/main.c ./src/analysis/arg_analysis.c -L./lib -lft
+$(TARGET): $(OBJS)
+	make -C ./lib DEBUG=1
+	$(CC) $(CFLAGS) -I$(INCLUDE) $(OBJS) -Llib -lft -o $@
 
-$(LIB):
-	make -C ./lib/
-
+$(BUILDDIR)%.o: %.c
+	test -d $(BUILDDIR) || mkdir $(BUILDDIR)
+	$(CC) $(CFLAGS) -I$(INCLUDE) -c $< -o $@
 fclean:
 	make -C ./lib fclean
+	rm -rf $(BUILDDIR)
 	rm $(TARGET)

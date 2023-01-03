@@ -6,12 +6,32 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2022/12/13 23:44:31 by johmatos         ###   ########.fr       */
+/*   Updated: 2022/12/26 14:42:19 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "errors.h"
 #include "push_swap.h"
+
+static int check_overflow(char *argv)
+{
+	long long nbr;
+
+	nbr = ft_atol(argv);
+	if (nbr <= INT_MIN || nbr >= INT_MAX)
+		return (0);
+	return (1);
+}
+
+static int is_valid(char *arg)
+{
+	if (!ft_isdigit(*arg) && (*arg == '+' || *arg == '-'))
+		arg++;
+	while (*arg)
+		if (!ft_isdigit(*arg++))
+			return (0);
+	return (1);
+}
 
 int check_arguments(int argc, char *argv[])
 {
@@ -22,11 +42,10 @@ int check_arguments(int argc, char *argv[])
 	while (index < argc)
 	{
 		arg = argv[index];
-		if (!ft_isdigit(*arg) && (*arg == '+' || *arg == '-'))
-			arg++;
-		while (*arg)
-			if (!ft_isdigit(*arg++))
-				return (0);
+		if(!is_valid(arg))
+			return (0);
+		if (!check_overflow(arg))
+			return (0);
 		index++;
 	}
 	return (1);
