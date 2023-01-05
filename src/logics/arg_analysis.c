@@ -6,15 +6,15 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/03 14:54:11 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:58:20 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int check_overflow(char *argv)
+static int	check_overflow(char *argv)
 {
-	long long nbr;
+	long long	nbr;
 
 	nbr = ft_atol(argv);
 	if (nbr <= INT_MIN || nbr >= INT_MAX)
@@ -22,7 +22,7 @@ static int check_overflow(char *argv)
 	return (1);
 }
 
-static int is_valid(char *arg)
+static int	is_valid(char *arg)
 {
 	if (!ft_isdigit(*arg) && (*arg == '+' || *arg == '-'))
 		arg++;
@@ -32,16 +32,16 @@ static int is_valid(char *arg)
 	return (1);
 }
 
-int check_arguments(int argc, char *argv[])
+int	check_arguments(int argc, char *argv[])
 {
-	int index;
-	char *arg;
+	int		index;
+	char	*arg;
 
-	index= 1;
+	index = 1;
 	while (index < argc)
 	{
 		arg = argv[index];
-		if(!is_valid(arg))
+		if (!is_valid(arg))
 			return (0);
 		if (!check_overflow(arg))
 			return (0);
