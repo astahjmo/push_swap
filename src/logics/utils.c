@@ -37,8 +37,11 @@ void	pop(t_stack *stack)
 	free(cursor->next);
 	cursor->next = NULL;
 }
-int		isEmpty(t_stack *stack)
+
+int	is_empty(t_stack *stack)
 {
+	if (stack == NULL)
+		return (0);
 	if (stack->size == 0)
 		return (1);
 	return (0);
