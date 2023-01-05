@@ -42,7 +42,7 @@ int	init_stack(int argc, char *argv[])
 	stack_a->size = 0;
 	stack_a->pop = pop;
 	stack_a->push = push;
-	stack_a->isEmpty = isEmpty;
+	stack_a->is_empty = is_empty;
 	stack_a->top = NULL;
 	stack_a->head = NULL;
 	if (!populate_stack(argc, argv, stack_a))

@@ -31,11 +31,11 @@ typedef struct s_stack{
 	void		(*push)(t_stack *stack, int value);
 	void		(*pop)(t_stack *stack);
 	t_node		*top;
-	int			(*isEmpty)(t_stack *stack);
+	int			(*is_empty)(t_stack *stack);
 }				t_stack;
 
 int		check_arguments(int argc, char *argv[]);
-int		isEmpty(t_stack *stack);
+int		is_empty(t_stack *stack);
 void	push(t_stack *stack, int value);
 void	pop(t_stack *stack);
 void	top(t_stack *stack);
