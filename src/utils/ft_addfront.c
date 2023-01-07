@@ -6,17 +6,21 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:57:05 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/06 17:36:18 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/07 19:48:44 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_add_front(t_node *back, t_node *front)
+void	ft_add_front(t_node *old, t_node *new)
 {
+	t_node *temp;
 
-	if (!back)
+	temp = malloc(sizeof(t_node));
+	if (!old)
 		return ;
-	front->next = back;
-	*back = *front;
+	*temp = *old;
+	*old = *new;
+	*new = *temp;
+	old->next = new;
 }

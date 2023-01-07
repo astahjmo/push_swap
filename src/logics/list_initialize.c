@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:10:23 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/06 17:35:25 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/07 20:00:28 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,11 @@ int	init_stack(int argc, char *argv[])
 		return (0);
 	cursor = stack_a->head;
 	ft_add_front(stack_a->head, ft_nodenew(20));
-	ft_printf("%d\n",cursor->value);
-	ft_printf("%d\n",cursor->next->value);
+	ft_add_front(stack_a->head->next, ft_nodenew(40));
+	while (cursor)
+	{
+		ft_printf("%d\n", cursor->value);
+		cursor = cursor->next;
+	}
 	return (1);
 }
