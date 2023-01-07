@@ -6,7 +6,7 @@
 #    By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2023/01/03 12:00:48 by johmatos         ###   ########.fr        #
+#    Updated: 2023/01/05 17:21:11 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ $(TARGET): $(OBJS)
 $(BUILDDIR)%.o: %.c
 	test -d $(BUILDDIR) || mkdir $(BUILDDIR)
 	$(CC) $(CFLAGS) -I$(INCLUDE) -c $< -o $@
+
 fclean:
 	make -C ./lib fclean
 	rm -rf $(BUILDDIR)

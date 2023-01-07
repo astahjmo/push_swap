@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:47:49 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/05 17:01:38 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/06 16:50:17 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ void	*ft_nodenew(int content)
 		return ((void *) NULL);
 	node->value = content;
 	node->next = NULL;
+	node->back = NULL;
 	return (node);
 }

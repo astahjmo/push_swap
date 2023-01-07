@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:20:00 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/05 16:54:26 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:13:40 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	push(t_stack *stack, int value)
 {
 	if (stack == NULL)
 		return ;
-	stack->top = ft_add_back(&stack->head, ft_nodenew(value));
+	stack->top = ft_add_back(stack->head, ft_nodenew(value));
 	stack->size++;
 }
 

@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/03 15:45:13 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:05:12 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_node t_node;
 typedef struct s_node{
 	int				value;
 	struct s_node	*next;
+	struct s_node	*back;
 }					t_node;
 
 typedef struct s_stack{
@@ -40,8 +41,8 @@ void	push(t_stack *stack, int value);
 void	pop(t_stack *stack);
 void	top(t_stack *stack);
 int	init_stack(int argc, char *argv[]);
-t_node	*ft_add_back(t_node **node, t_node *new);
-void	ft_add_front(t_node **lst, t_node *new);
+t_node	*ft_add_back(t_node *node, t_node *new);
+void	ft_add_front(t_node *lst, t_node *new);
 void	*ft_nodenew(int content);
 t_node *ft_lastnode(t_node *node);
 t_node *ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
