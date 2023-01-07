@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:57:05 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/07 19:48:44 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/07 20:47:55 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	ft_add_front(t_node *old, t_node *new)
 	*old = *new;
 	*new = *temp;
 	old->next = new;
+	free(temp);
 }
