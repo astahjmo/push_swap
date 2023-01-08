@@ -6,7 +6,7 @@
 #    By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2023/01/05 17:21:11 by johmatos         ###   ########.fr        #
+#    Updated: 2023/01/08 05:47:32 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ INCLUDE = ./include/
 LIB = libft.a
 VPATH = ./src ./src/logics ./src/algorithms ./src/instructions ./src/utils
 SOURCES = arg_analysis.c list_initialize.c utils.c main.c ft_addback.c\
-		  ft_addfront.c ft_nodenew.c ft_lastnode.c
+		  ft_addfront.c ft_nodenew.c ft_lastnode.c swap.c push.c rotate.c
 BUILDDIR = ./objs/
 OBJS = $(addprefix $(BUILDDIR), $(SOURCES:.c=.o))
 CC = gcc 
