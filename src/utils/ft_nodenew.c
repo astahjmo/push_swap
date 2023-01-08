@@ -6,11 +6,11 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:47:49 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/06 16:50:17 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/07 21:17:15 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
 void	*ft_nodenew(int content)
 {
