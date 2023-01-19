@@ -6,15 +6,15 @@
 /*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 20:49:13 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/19 18:05:24 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/19 18:24:26 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void rrotate(t_stack *stack, char *instruction)
+void	rrotate(t_stack *stack, char *instruction)
 {
-	t_node *temp;
+	t_node	*temp;
 
 	temp = stack->head;
 	stack->head = stack->top;
@@ -24,6 +24,5 @@ void rrotate(t_stack *stack, char *instruction)
 	temp->back = stack->head;
 	stack->head->back = NULL;
 	if (instruction)
-		ft_printf("rrr\n");
-	
+		ft_printf(instruction);
 }

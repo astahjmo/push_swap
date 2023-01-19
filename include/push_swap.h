@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/19 17:55:56 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/19 18:24:08 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 # define SA "sa\n"
 # define SB "sb\n"
 # define SS "ss\n"
+# define RRA "rra\n"
+# define RRB "rrb\n"
+# define RRR "rrr\n"
 typedef struct s_stack t_stack;
 typedef struct s_node t_node;
 
