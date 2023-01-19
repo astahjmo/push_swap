@@ -6,28 +6,22 @@
 /*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 20:49:25 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/08 05:49:17 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:31:30 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-void	rotate(t_stack *generic)
+void	rotate(t_stack *generic, char *instruction)
 {
-	t_node	*cursor;
 	t_node	*temp;
-	int		index;
-
-	index = generic->size;
-	while (index)
-	{
-		cursor = generic->head;
-		cursor = cursor->next;
-		temp = generic->head;
-		temp->next =NULL;
-		generic->top->next = temp;
-		generic->top = temp;
-		temp = cursor;
-		index--;
-	}
+	temp = generic->head;
+	generic->head = temp->next;
+	generic->head->back = NULL;
+	temp->next = generic->top;
+	generic->top->next = temp;
+	generic->top = temp;
+	generic->top->next = NULL;
+	if (instruction)
+		ft_printf(instruction);
 }
