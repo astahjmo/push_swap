@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/08 05:46:17 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:55:56 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,14 @@
 # include <stdio.h>
 # include "errors.h"
 # include <limits.h>
-
+# define RA "ra\n"
+# define RB "rb\n"
+# define RR "rr\n"
+# define PA "pa\n"
+# define PB "pb\n"
+# define SA "sa\n"
+# define SB "sb\n"
+# define SS "ss\n"
 typedef struct s_stack t_stack;
 typedef struct s_node t_node;
 
@@ -49,5 +56,12 @@ t_node *ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
 void swap(t_stack *generic, char *instruction);
 void sswap(t_stack *stack_a, t_stack *stack_b);
 void push(t_stack *stack_x, t_stack *stack_y, char *instruction);
-void	rotate(t_stack *generic);
+void	rotate(t_stack *generic, char *instruction);
+void	rotate_ab(t_stack *generic_a, t_stack *generic_b);
+void	rrotate(t_stack *stack, char *instruction);
+//
+//utils
+//
+
+void printf_stack(t_node *head);
 #endif
