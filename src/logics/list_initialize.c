@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:10:23 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/07 20:00:28 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/19 18:07:17 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,24 +33,12 @@ static int	populate_stack(int size, char **childs, t_stack *stack)
 int	init_stack(int argc, char *argv[])
 {
 	t_stack	*stack_a;
-	t_node *cursor;
 
 	stack_a = malloc(sizeof(t_stack));
 	stack_a->size = 0;
-	stack_a->pop = pop;
-	stack_a->push = push;
-	stack_a->is_empty = is_empty;
 	stack_a->top = NULL;
 	stack_a->head = NULL;
 	if (!populate_stack(argc, argv, stack_a))
 		return (0);
-	cursor = stack_a->head;
-	ft_add_front(stack_a->head, ft_nodenew(20));
-	ft_add_front(stack_a->head->next, ft_nodenew(40));
-	while (cursor)
-	{
-		ft_printf("%d\n", cursor->value);
-		cursor = cursor->next;
-	}
 	return (1);
 }
