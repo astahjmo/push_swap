@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:20:00 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 20:50:11 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:50:26 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,20 @@ void	pop(t_stack *stack)
 	t_node		*cursor;
 
 	offset = stack->size;
-	index = 0;
+	index = 1;
 	cursor = stack->head;
-	while (cursor && index++ != offset-1)
+	while (cursor && index++ < offset - 1)
 		cursor = cursor->next;
-	stack->top = cursor;
-	stack->size--;
 	free(cursor->next);
 	cursor->next = NULL;
+	if (offset == 1)
+	{
+		free(cursor);
+		cursor = NULL;
+		stack->head = NULL;
+	}
+	stack->top = cursor;
+	stack->size--;
 }
 
 int	is_empty(t_stack *stack)
