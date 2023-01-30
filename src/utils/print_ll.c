@@ -6,15 +6,15 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:21 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/16 15:49:45 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:05:42 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void printf_stack(t_node *head)
+void	printf_stack(t_node *head)
 {
-	t_node *cursor;
+	t_node	*cursor;
 
 	cursor = head;
 	while (cursor)

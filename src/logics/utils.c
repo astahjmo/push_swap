@@ -6,12 +6,11 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:20:00 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/08 05:47:04 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:03:27 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 void	pop(t_stack *stack)
 {

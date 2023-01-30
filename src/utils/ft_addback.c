@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:44:48 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/08 01:02:03 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:05:29 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 t_node	*ft_add_back(t_node *node, t_node *new)
 {
-
 	t_node	*temp;
 
 	if (!node)

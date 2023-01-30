@@ -6,7 +6,7 @@
 /*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 20:49:25 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/19 16:31:30 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:04:30 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	rotate(t_stack *generic, char *instruction)
 {
 	t_node	*temp;
+
 	temp = generic->head;
 	generic->head = temp->next;
 	generic->head->back = NULL;

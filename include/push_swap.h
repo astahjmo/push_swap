@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/19 18:24:08 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:12:26 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "../lib/include/libft.h"
 # include <stdio.h>
-# include "errors.h"
 # include <limits.h>
 # define RA "ra\n"
 # define RB "rb\n"
@@ -28,8 +27,9 @@
 # define RRA "rra\n"
 # define RRB "rrb\n"
 # define RRR "rrr\n"
-typedef struct s_stack t_stack;
-typedef struct s_node t_node;
+
+typedef struct s_stack	t_stack;
+typedef struct s_node	t_node;
 
 typedef struct s_node{
 	int				value;
@@ -47,24 +47,28 @@ int		check_arguments(int argc, char *argv[]);
 int		is_empty(t_stack *stack);
 void	pop(t_stack *stack);
 void	top(t_stack *stack);
-int	init_stack(int argc, char *argv[]);
+int		init_stack(int argc, char *argv[]);
 t_node	*ft_add_back(t_node *node, t_node *back);
 void	ft_add_front(t_node *lst, t_node *front);
 void	*ft_nodenew(int content);
-t_node *ft_lastnode(t_node *node);
-t_node *ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
+t_node	*ft_lastnode(t_node *node);
+t_node	*ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
 
+//
 // Instructions
 //
-void swap(t_stack *generic, char *instruction);
-void sswap(t_stack *stack_a, t_stack *stack_b);
-void push(t_stack *stack_x, t_stack *stack_y, char *instruction);
+
+void	swap(t_stack *generic, char *instruction);
+void	sswap(t_stack *stack_a, t_stack *stack_b);
+void	push(t_stack *stack_x, t_stack *stack_y, char *instruction);
 void	rotate(t_stack *generic, char *instruction);
 void	rotate_ab(t_stack *generic_a, t_stack *generic_b);
 void	rrotate(t_stack *stack, char *instruction);
+
 //
 //utils
 //
 
-void printf_stack(t_node *head);
+void	printf_stack(t_node *head);
+
 #endif
