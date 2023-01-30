@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 19:12:26 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:39:45 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 
 typedef struct s_stack	t_stack;
 typedef struct s_node	t_node;
+typedef struct s_data	t_data;
 
 typedef struct s_node{
 	int				value;
@@ -43,16 +44,21 @@ typedef struct s_stack{
 	t_node		*top;
 }				t_stack;
 
+typedef struct s_data{
+	t_stack		*stack_a;
+	t_stack		*stack_b;
+}				t_data;
+
 int		check_arguments(int argc, char *argv[]);
 int		is_empty(t_stack *stack);
 void	pop(t_stack *stack);
 void	top(t_stack *stack);
-int		init_stack(int argc, char *argv[]);
-t_node	*ft_add_back(t_node *node, t_node *back);
 void	ft_add_front(t_node *lst, t_node *front);
 void	*ft_nodenew(int content);
+t_node	*ft_add_back(t_node *node, t_node *back);
 t_node	*ft_lastnode(t_node *node);
 t_node	*ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
+t_stack	*init_stack(int argc, char *argv[]);
 
 //
 // Instructions

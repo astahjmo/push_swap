@@ -5,3 +5,4 @@ lib
 vgcore*
 .objs/
 .lib/
+.vscode/

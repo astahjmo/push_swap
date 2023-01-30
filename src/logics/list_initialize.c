@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:10:23 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/19 18:07:17 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:43:22 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ static int	populate_stack(int size, char **childs, t_stack *stack)
 	return (1);
 }
 
-int	init_stack(int argc, char *argv[])
+t_stack	*init_stack(int argc, char *argv[])
 {
-	t_stack	*stack_a;
+	t_stack	*stack;
 
-	stack_a = malloc(sizeof(t_stack));
-	stack_a->size = 0;
-	stack_a->top = NULL;
-	stack_a->head = NULL;
-	if (!populate_stack(argc, argv, stack_a))
-		return (0);
-	return (1);
+	stack = malloc(sizeof(t_stack));
+	stack->size = 0;
+	stack->top = NULL;
+	stack->head = NULL;
+	if (argc >= 3)
+		populate_stack(argc, argv, stack);
+	return (stack);
 }
