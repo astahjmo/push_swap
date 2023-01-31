@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2023/01/19 17:57:06 by johmatos         ###   ########.fr        #
+#    Updated: 2023/01/30 19:22:45 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SOURCES = arg_analysis.c list_initialize.c utils.c main.c ft_addback.c\
 BUILDDIR = ./objs/
 OBJS = $(addprefix $(BUILDDIR), $(SOURCES:.c=.o))
 CC = gcc 
-CFLAGS = -g
+CFLAGS = -g -Wall -Wextra -Werror 
 
 all: $(TARGET)
 
