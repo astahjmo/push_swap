@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_initialize.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 19:10:23 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 19:43:22 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/30 21:23:19 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ static int	populate_stack(int size, char **childs, t_stack *stack)
 {
 	int		index;
 
-	index = 1;
-	while (size > index)
+	index = size -1;
+	while (index >= 1)
 	{
 		if (stack->size == 0)
 			stack->head = ft_nodenew(ft_atoi(childs[index]));
@@ -25,7 +25,7 @@ static int	populate_stack(int size, char **childs, t_stack *stack)
 			stack->top = ft_add_back(ft_lastnode(stack->head),
 					ft_nodenew(ft_atoi(childs[index])));
 		stack->size++;
-		index++;
+		index--;
 	}
 	return (1);
 }
