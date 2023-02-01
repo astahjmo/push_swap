@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 21:15:06 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/31 15:42:27 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,12 @@ static int	check_double(char *arg, int check)
 	static int		table[256];
 	int				index;
 
-	index = -1;
+	index = '0';
 	if (check == 1 && ft_isdigit(*arg))
 		table[(int)*arg]++;
 	else
-		while (++index < 256)
-			if (table[index] > 1)
+		while (index <= '9')
+			if (table[index++] > 1)
 				return (0);
 	return (1);
 }
