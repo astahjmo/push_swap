@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 19:39:45 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/01/31 18:36:33 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,12 @@ void	rotate_ab(t_stack *generic_a, t_stack *generic_b);
 void	rrotate(t_stack *stack, char *instruction);
 
 //
+// algorithms
+//
+void	sort_handler(t_stack *a, t_stack *b);
 //utils
 //
 
-void	printf_stack(t_node *head);
+void	printf_stack(t_stack *stack, char id);
 
 #endif
