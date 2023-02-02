@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/31 18:36:33 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/02 19:16:40 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void	rrotate(t_stack *stack, char *instruction);
 // algorithms
 //
 void	sort_handler(t_stack *a, t_stack *b);
+void	simple_sort(t_stack *a, t_stack *b);
 //utils
 //
 
