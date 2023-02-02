@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/31 15:42:27 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/02 20:03:56 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,6 @@ static int	is_valid(char *arg)
 	return (1);
 }
 
-static int	check_double(char *arg, int check)
-{
-	static int		table[256];
-	int				index;
-
-	index = '0';
-	if (check == 1 && ft_isdigit(*arg))
-		table[(int)*arg]++;
-	else
-		while (index <= '9')
-			if (table[index++] > 1)
-				return (0);
-	return (1);
-}
-
 int	check_arguments(int argc, char *argv[])
 {
 	int		index;
@@ -60,10 +45,7 @@ int	check_arguments(int argc, char *argv[])
 			return (0);
 		if (!check_overflow(arg))
 			return (0);
-		check_double(arg, 1);
 		index++;
 	}
-	if (!check_double(NULL, 0))
-		return (0);
 	return (1);
 }
