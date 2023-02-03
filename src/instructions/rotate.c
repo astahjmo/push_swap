@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 20:49:25 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 19:04:30 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/03 14:39:46 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	rotate(t_stack *generic, char *instruction)
 	generic->head->back = NULL;
 	temp->next = generic->top;
 	generic->top->next = temp;
+	temp->back = generic->top;
 	generic->top = temp;
 	generic->top->next = NULL;
 	if (instruction)
