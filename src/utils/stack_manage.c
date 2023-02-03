@@ -6,12 +6,26 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 15:20:00 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/02 19:20:49 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/03 14:36:23 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
+
+int	is_ordered(t_stack *x)
+{
+	t_node	*cursor;
+
+	cursor = x->head;
+	while (cursor)
+	{
+		if (cursor->next)
+			if (cursor->value < cursor->next->value)
+				return (0);
+		cursor = cursor->next;
+	}
+	return (1);
+}
 
 void	pop(t_stack *stack)
 {
