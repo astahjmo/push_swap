@@ -7,3 +7,4 @@ vgcore*
 lib/
 .vscode/
 objs/
+checker_linux
