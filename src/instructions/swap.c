@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 21:11:05 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 19:04:20 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/03 01:19:13 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	swap(t_stack *generic, char *instruction)
 	*back = temp;
 	back->next = top;
 	top->next = NULL;
+	back->back = top->back;
+	top->back = back;
 	generic->top = top;
 	if (instruction)
 		ft_printf(instruction);
