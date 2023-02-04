@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/03 13:16:53 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/04 19:23:36 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,16 @@ void	rrotate(t_stack *stack, char *instruction);
 //
 // algorithms
 //
+
 void	sort_handler(t_stack *a, t_stack *b);
 void	simple_sort(t_stack *a, t_stack *b);
+void	complex_sort(t_stack *a, t_stack *b);
+void	solve_three(t_stack *a);
+
+//
 //utils
 //
+
 void	printf_stack(t_stack *stack, char id);
 int		is_ordered(t_stack *x);
 

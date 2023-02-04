@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_handler.c                                     :+:      :+:    :+:   */
+/*   complex_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 16:24:23 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/04 19:32:23 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/04 19:20:38 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/05 00:08:56 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_handler(t_stack *a, t_stack *b)
+void	complex_sort(t_stack *a, t_stack *b)
 {
-	if (a->size <= 3)
-		simple_sort(a, b);
-	else
-		complex_sort(a,b);
-	return ;
+	while (a->size != 3)
+		push(a, b, PB);
+	solve_three(a);
+	while (!is_empty(b))
+		dynamic_sort(a, b);
 }
