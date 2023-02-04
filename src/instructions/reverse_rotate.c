@@ -3,26 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 20:49:13 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/19 18:24:26 by johmatos         ###   ########.fr       */
+/*   Created: 2023/01/07 20:49:25 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/03 22:12:02 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
-void	rrotate(t_stack *stack, char *instruction)
+void	rrotate(t_stack *generic, char *instruction)
 {
 	t_node	*temp;
 
-	temp = stack->head;
-	stack->head = stack->top;
-	stack->top = stack->top->back;
-	stack->top->next = NULL;
-	stack->head->next = temp;
-	temp->back = stack->head;
-	stack->head->back = NULL;
+	temp = generic->head;
+	generic->head = temp->next;
+	generic->head->back = NULL;
+	temp->next = generic->top;
+	generic->top->next = temp;
+	temp->back = generic->top;
+	generic->top = temp;
+	generic->top->next = NULL;
 	if (instruction)
 		ft_printf(instruction);
 }
