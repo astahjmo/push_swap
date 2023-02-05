@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/04 19:23:36 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/05 12:24:46 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "../lib/include/libft.h"
 # include <stdio.h>
 # include <limits.h>
+
 # define RA "ra\n"
 # define RB "rb\n"
 # define RR "rr\n"
@@ -34,6 +35,7 @@ typedef struct s_data	t_data;
 
 typedef struct s_node{
 	int				value;
+	int				index;
 	struct s_node	*next;
 	struct s_node	*back;
 }					t_node;
@@ -50,14 +52,6 @@ typedef struct s_data{
 }				t_data;
 
 int		check_arguments(int argc, char *argv[]);
-int		is_empty(t_stack *stack);
-void	pop(t_stack *stack);
-void	top(t_stack *stack);
-void	ft_add_front(t_node *lst, t_node *front);
-void	*ft_nodenew(int content);
-t_node	*ft_add_back(t_node *node, t_node *back);
-t_node	*ft_lastnode(t_node *node);
-t_node	*ft_lstmap(t_node *lst, void *(*f)(void *), void (*del)(void *));
 t_stack	*init_stack(int argc, char *argv[]);
 
 //
@@ -76,7 +70,7 @@ void	rrotate(t_stack *stack, char *instruction);
 //
 
 void	sort_handler(t_stack *a, t_stack *b);
-void	simple_sort(t_stack *a, t_stack *b);
+void	simple_sort(t_stack *a);
 void	complex_sort(t_stack *a, t_stack *b);
 void	solve_three(t_stack *a);
 
@@ -84,7 +78,13 @@ void	solve_three(t_stack *a);
 //utils
 //
 
-void	printf_stack(t_stack *stack, char id);
 int		is_ordered(t_stack *x);
+int		is_empty(t_stack *stack);
+void	ft_add_front(t_node *lst, t_node *front);
+void	*ft_nodenew(int content);
+void	printf_stack(t_stack *stack, char id);
+void	pop(t_stack *stack);
+t_node	*ft_add_back(t_node *node, t_node *back);
+t_node	*ft_lastnode(t_node *node);
 
 #endif
