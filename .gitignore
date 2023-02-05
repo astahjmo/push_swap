@@ -8,3 +8,4 @@ lib/
 .vscode/
 objs/
 checker_linux
+build/*
