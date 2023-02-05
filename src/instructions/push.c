@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 20:49:03 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/02 19:22:58 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/05 12:13:31 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	push(t_stack *stack_x, t_stack *stack_y, char *instruction)
 		return ;
 	temp = stack_x->top->value;
 	pop(stack_x);
-	if (stack_y->size == 0)
+	if (is_empty(stack_y))
 	{
 		stack_y->head = ft_nodenew(temp);
 		stack_y->top = stack_y->head;
