@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/05 20:58:43 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/07 19:54:56 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:35:07 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ void	clear_memory(t_stack *a)
 		free(cursor);
 	}
 	free (a);
-	exit(1);
 }
