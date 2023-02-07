@@ -71,9 +71,8 @@ void	rrotate(t_stack *stack, char *instruction);
 //
 
 void	sort_handler(t_stack *a, t_stack *b);
-void	simple_sort(t_stack *a);
+void	simple_sort(t_stack *a, t_stack *b);
 void	complex_sort(t_stack *a, t_stack *b);
-void	solve_three(t_stack *a);
 
 //
 //utils
@@ -85,6 +84,7 @@ void	ft_add_front(t_node *lst, t_node *front);
 void	*ft_nodenew(int content);
 void	printf_stack(t_stack *stack, char id);
 void	pop(t_stack *stack);
+void	clear_memory(t_stack *a);
 t_node	*ft_add_back(t_node *node, t_node *back);
 t_node	*ft_lastnode(t_node *node);
 
