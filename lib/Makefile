@@ -6,7 +6,7 @@
 #    By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/30 16:11:43 by johmatos          #+#    #+#              #
-#    Updated: 2023/02/07 20:47:57 by johmatos         ###   ########.fr        #
+#    Updated: 2023/02/07 21:24:25 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ SOURCES := ft_atoi.c ft_isalnum.c ft_isalpha.c \
 		   get_next_line_utils_bonus.c parser.c \
 
 OBJS := $(addprefix $(BUILDDIR), $(SOURCES:.c=.o))
+BUILDPREFIX = [\033[0;32m+\033[0m]
+RMPREFIX = [\033[0;31m-\033[0m]
 
 ifdef DEBUG
     CFLAGS += -g3
@@ -39,14 +41,19 @@ endif
 all: $(LIB)
 
 $(LIB): $(OBJS)
-	ar -rcs $@ $(OBJS)
+	@ar -rcs $@ $(OBJS)
+	@echo "$(BUILDPREFIX) Created $@"
 
 $(BUILDDIR)%.o: %.c
-	test -d $(BUILDDIR) || mkdir $(BUILDDIR)
-	$(CC) $(CFLAGS) -I./include -c $< -o $@
+	@test -d $(BUILDDIR) || mkdir $(BUILDDIR)
+	@$(CC) $(CFLAGS) -I./include -c $< -o $@
+	@echo "$(BUILDPREFIX) building $<"
 
 clean:
-	rm -rf $(BUILDDIR)
+	@rm -rf $(BUILDDIR)
+	@echo "$(RMPREFIX) Cleaning build files from lib"
 
 fclean: clean
-	rm -rf $(LIB)
+	@rm -rf $(LIB)
+
+re: fclean all
