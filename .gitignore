@@ -1,7 +1,6 @@
 .cache/
 push_swap
 compile_commands.json
-lib
 vgcore*
 .objs/
 lib/
