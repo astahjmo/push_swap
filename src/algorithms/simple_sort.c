@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 19:06:39 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/07 20:00:01 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/07 18:47:32 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	simple_sort(t_stack *a, t_stack *b)
 		while (!is_ordered(a))
 			solve_three(a);
 	}
-	if (b->top->index < 1)
+	if (!is_empty(b) && b->top->index < 1)
 		swap(b, SB);
 	while (!is_empty(b))
 		push(b, a, PA);
