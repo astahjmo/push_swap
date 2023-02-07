@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/05 12:24:46 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/05 22:33:12 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef struct s_data{
 
 int		check_arguments(int argc, char *argv[]);
 t_stack	*init_stack(int argc, char *argv[]);
+void	mapper_index(t_stack *a);
 
 //
 // Instructions
