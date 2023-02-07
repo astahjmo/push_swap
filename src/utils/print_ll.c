@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:47:21 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/05 11:55:16 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/05 20:44:54 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	printf_stack(t_stack *stack, char id)
 	cursor = stack->top;
 	while (cursor)
 	{
-		ft_printf("%d\n", cursor->value);
+		ft_printf("%d - %d\n", cursor->value, cursor->index);
 		cursor = cursor->back;
 	}
 }
