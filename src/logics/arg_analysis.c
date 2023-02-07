@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/02 20:03:56 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:04:09 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,33 @@ static int	is_valid(char *arg)
 	return (1);
 }
 
+static int	has_duplicate(int argc, char *argv[])
+{
+	int	idx;
+	int	cur;
+	int	debt;
+
+	idx = 1;
+	cur = 1;
+	debt = 0;
+	while (idx < argc)
+	{
+		while (cur < argc)
+		{
+			if (ft_strncmp(argv[idx], argv[cur],
+					ft_strlen(argv[idx]) + ft_strlen(argv[cur])) == 0)
+				debt++;
+			cur++;
+		}
+		if (debt > 1)
+			return (1);
+		debt = 0;
+		cur = 1;
+		idx++;
+	}
+	return (0);
+}
+
 int	check_arguments(int argc, char *argv[])
 {
 	int		index;
@@ -47,5 +74,7 @@ int	check_arguments(int argc, char *argv[])
 			return (0);
 		index++;
 	}
+	if (has_duplicate(argc, argv))
+		return (0);
 	return (1);
 }
