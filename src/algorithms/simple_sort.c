@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 19:06:39 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/07 20:00:01 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/07 21:27:07 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,16 +69,12 @@ static void	solve_above_three(t_stack *a, t_stack *b)
 
 void	simple_sort(t_stack *a, t_stack *b)
 {
-	if (is_ordered(a))
-		return ;
-	else if (a->size == 2)
+	if (a->size == 2)
 		solve_two(a);
 	else if (a->size <= 5)
-	{
 		solve_above_three(a, b);
-		while (!is_ordered(a))
-			solve_three(a);
-	}
+	while (!is_ordered(a))
+		solve_three(a);
 	if (b->top->index < 1)
 		swap(b, SB);
 	while (!is_empty(b))
