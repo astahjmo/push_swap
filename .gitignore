@@ -7,3 +7,4 @@ vgcore*
 objs/
 checker_linux
 build/*
+push_swap_visualizer/
