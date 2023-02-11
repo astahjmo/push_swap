@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/07 20:04:09 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/11 19:13:51 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	check_overflow(char *argv)
 {
 	long long	nbr;
 
-	nbr = ft_atoi(argv);
+	nbr = ft_atol(argv);
 	if (nbr <= INT_MIN || nbr >= INT_MAX)
 		return (0);
 	return (1);
