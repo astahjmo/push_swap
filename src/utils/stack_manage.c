@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_manage.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 15:20:00 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/03 14:36:23 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:40:36 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:40:37 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   arg_analysis.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 22:37:15 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/11 19:13:51 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:39:54 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:39:55 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

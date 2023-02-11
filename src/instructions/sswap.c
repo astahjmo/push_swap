@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sswap.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 21:11:05 by johmatos          #+#    #+#             */
-/*   Updated: 2023/01/30 19:06:23 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:39:34 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:39:36 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
-#include <stdio.h>
+#include "push_swap.h"
 
 void	sswap(t_stack *stack_a, t_stack *stack_b)
 {

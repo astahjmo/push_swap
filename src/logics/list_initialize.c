@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_initialize.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 19:10:23 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/05 12:19:48 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:40:02 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:40:03 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

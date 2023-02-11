@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/11 16:43:45 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:40:55 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:40:55 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

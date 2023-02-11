@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 20:49:25 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/03 22:12:02 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:39:16 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:39:18 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "push_swap.h"
 
 void	rrotate(t_stack *generic, char *instruction)
 {

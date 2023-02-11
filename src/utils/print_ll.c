@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_ll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/16 15:47:21 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/05 20:44:54 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:40:27 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:40:29 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

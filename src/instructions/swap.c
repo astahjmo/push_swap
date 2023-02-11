@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 21:11:05 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/04 21:11:06 by johmatos         ###   ########.fr       */
+/*   Created: 2023/02/11 19:39:42 by johmatos          #+#    #+#             */
+/*   Updated: 2023/02/11 19:39:43 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
-#include <stdio.h>
+#include "push_swap.h"
 
 void	swap(t_stack *generic, char *instruction)
 {
