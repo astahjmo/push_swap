@@ -6,7 +6,7 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:34:46 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/05 22:33:12 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:43:45 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 # define PUSH_SWAP_H
 
 # include "../lib/include/libft.h"
-# include <stdio.h>
 # include <limits.h>
+
+# ifndef DEBUG
+#  define DEBUG 0
+# endif
 
 # define RA "ra\n"
 # define RB "rb\n"

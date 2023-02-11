@@ -6,11 +6,12 @@
 /*   By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:03:50 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/07 20:35:21 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/11 16:52:57 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 int	main(int argc, char *argv[])
 {
@@ -22,6 +23,8 @@ int	main(int argc, char *argv[])
 	data.stack_b = init_stack(0, NULL);
 	mapper_index(data.stack_a);
 	sort_handler(data.stack_a, data.stack_b);
+	if (DEBUG)
+		printf_stack(data.stack_a, 'a');
 	clear_memory(data.stack_a);
 	clear_memory(data.stack_b);
 	return (0);
