@@ -6,7 +6,7 @@
 /*   By: johmatos <johmatos@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 00:23:34 by johmatos          #+#    #+#             */
-/*   Updated: 2023/02/07 20:44:36 by johmatos         ###   ########.fr       */
+/*   Updated: 2023/02/11 19:13:28 by johmatos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,15 +47,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 
 //utils
-int		ft_atoi(const char *str);
-int		ft_isalnum(int n);
-int		ft_isalpha(int n);
-int		ft_isdigit(int n);
-int		ft_isprint(int n);
-int		ft_isascii(int n);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
+int			ft_atoi(const char *str);
+int			ft_isalnum(int n);
+int			ft_isalpha(int n);
+int			ft_isdigit(int n);
+int			ft_isprint(int n);
+int			ft_isascii(int n);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int			ft_tolower(int c);
+int			ft_toupper(int c);
+long long	ft_atol(const char *str);
 
 // STR
 char	*ft_substr(char const *s, unsigned int start, size_t len);
