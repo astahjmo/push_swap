@@ -6,7 +6,7 @@
 #    By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2023/02/07 21:23:59 by johmatos         ###   ########.fr        #
+#    Updated: 2023/02/11 18:51:04 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SOURCES = arg_analysis.c list_initialize.c stack_manage.c main.c \
 		  push.c rotate.c print_ll.c reverse_rotate.c reverse_rotate_ab.c \
 		  rotate_ab.c sort_handler.c simple_sort.c complex_sort.c mapper_index.c \
 		  after_execution.c
+
 BUILDDIR = ./build/
 OBJS = $(addprefix $(BUILDDIR), $(SOURCES:.c=.o))
 CC = gcc 
@@ -26,8 +27,11 @@ CFLAGS = -Wall -Wextra -Werror
 BUILDPREFIX = [\033[0;32m+\033[0m]
 RMPREFIX = [\033[0;31m-\033[0m]
 
+TESTER_URL=https://gist.githubusercontent.com/astahjmo/46c4c7dbbcd98a3fd90bde56410f65d9/raw/27fb01fcf021ff82ace6515f7a6d4f7e27eb90d7/push_swap_test.sh
+CHECKER_URL=https://projects.intra.42.fr/uploads/document/document/12420/checker_linux
+
 ifdef DEBUG
-    CFLAGS += -g3
+    CFLAGS += -g3 -D DEBUG=1
 endif
 	
 all: $(TARGET)
@@ -52,5 +56,11 @@ clean:
 fclean: clean
 	@make --no-print-directory -C ./lib fclean
 	@rm $(TARGET)
+
+test: all
+	@curl -L $(TESTER_URL) > test.sh
+	@curl -L $(CHECKER_URL) > checker_linux
+	@chmod +x checker_linux
+	@sh test.sh
 
 re: fclean all
