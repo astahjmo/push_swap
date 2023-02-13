@@ -6,7 +6,7 @@
 #    By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2023/02/11 18:51:04 by johmatos         ###   ########.fr        #
+#    Updated: 2023/02/13 10:53:30 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,8 @@ clean:
 fclean: clean
 	@make --no-print-directory -C ./lib fclean
 	@rm $(TARGET)
+	@test -d test.sh || rm test.sh
+	@test -d checker_linux || rm checker_linux
 
 test: all
 	@curl -L $(TESTER_URL) > test.sh
