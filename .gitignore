@@ -9,3 +9,5 @@ checker_linux
 build/*
 push_swap_visualizer/
 test.sh
+push_swap_tester/
+*.a
