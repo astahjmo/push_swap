@@ -6,11 +6,11 @@
 #    By: johmatos < johmatos@student.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/12 15:08:27 by johmatos          #+#    #+#              #
-#    Updated: 2023/02/13 15:09:50 by johmatos         ###   ########.fr        #
+#    Updated: 2023/02/13 15:28:47 by johmatos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = push_swap
+NAME = push_swap
 INCLUDE = ./include/
 LIB = libft.a
 VPATH = ./src ./src/logics ./src/algorithms ./src/instructions ./src/utils
@@ -34,9 +34,9 @@ ifdef DEBUG
     CFLAGS += -g3 -D DEBUG=1
 endif
 	
-all: $(TARGET)
+all: $(NAME)
 
-$(TARGET): $(OBJS)
+$(NAME): $(OBJS)
 	@echo "$(BUILDPREFIX) Creating lib"
 	@make --no-print-directory -C ./lib DEBUG=1
 	@$(CC) $(CFLAGS) -I$(INCLUDE) $(OBJS) -Llib -lft -o $@
@@ -55,7 +55,7 @@ clean:
 
 fclean: clean
 	@make --no-print-directory -C ./lib fclean
-	@if test -f $(TARGET); then rm $(TARGET); fi
+	@if test -f $(NAME); then rm $(NAME); fi
 	@if test -f ./test.sh; then rm ./test.sh; fi
 	@if test -f ./checker_linux; then rm ./checker_linux; fi
 
